@@ -2,6 +2,8 @@ import 'package:art_flutter/screens/MainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'globalVariables.dart';
+
 void main() => runApp(ArtFlutter());
 
 class ArtFlutter extends StatelessWidget {
@@ -13,8 +15,7 @@ class ArtFlutter extends StatelessWidget {
     ));
     return MaterialApp(
       theme: ThemeData(
-        brightness: Brightness.light,
-        accentColor: const Color.fromRGBO(40, 29, 157, 1),
+        backgroundColor: dark_purple,
       ),
       home: MainScreen(),
     );

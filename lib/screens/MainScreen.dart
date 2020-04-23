@@ -4,9 +4,8 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.white,
-      ),
+      backgroundColor: Theme.of(context).backgroundColor,
+      body: Container(),
     );
   }
 }
