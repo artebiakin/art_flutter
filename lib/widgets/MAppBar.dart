@@ -1,3 +1,4 @@
+import 'package:art_flutter/widgets/icons/ArrowLeft.dart';
 import 'package:flutter/material.dart';
 
 import '../globalVariables.dart';
@@ -24,10 +25,17 @@ class MAppBar extends StatelessWidget with PreferredSizeWidget {
                 crossAxisAlignment: WrapCrossAlignment.center,
                 spacing: 10,
                 children: <Widget>[
-                  Icon(
-                    Icons.arrow_back_ios,
-                    color: white,
+                  Container(
+                    width: 17,
+                    height: 17,
+                    child: CustomPaint(
+                      painter: ArrowLeft(),
+                    ),
                   ),
+                  // Icon(
+                  //   Icons.arrow_back_ios,
+                  //   color: white,
+                  // ),
                   Text(
                     title,
                     style: fontStyleTitle,

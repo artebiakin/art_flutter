@@ -1,6 +1,5 @@
+import 'package:art_flutter/globalVariables.dart';
 import 'package:flutter/material.dart';
-
-import '../globalVariables.dart';
 
 class Drop extends StatelessWidget {
   const Drop({Key key}) : super(key: key);

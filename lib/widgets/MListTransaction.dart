@@ -1,6 +1,6 @@
 import 'package:art_flutter/data/Transaction.dart';
 import 'package:art_flutter/globalVariables.dart';
-import 'package:art_flutter/widgets/Drop.dart';
+import 'package:art_flutter/widgets/icons/Drop.dart';
 import 'package:flutter/material.dart';
 
 class MListTransaction extends StatelessWidget {
@@ -128,7 +128,7 @@ class MTransaction extends StatelessWidget {
   Widget _parseValue(double value) {
     int val = value.toInt().abs();
     bool isPositive = value >= 0 ? true : false;
-    String result = isPositive ? '+ \$$val' : '-\$$val';
+    String result = isPositive ? '+ \$$val' : '- \$$val';
     return Text(result,
         style: fontStyleHeader.merge(TextStyle(
             color: isPositive ? dark_purple : red,
