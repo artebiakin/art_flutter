@@ -15,6 +15,7 @@ class ArtFlutter extends StatelessWidget {
     ));
     return MaterialApp(
       theme: ThemeData(
+        fontFamily: 'Poppins',
         backgroundColor: dark_purple,
       ),
       home: MainScreen(),

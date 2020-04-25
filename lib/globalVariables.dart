@@ -16,9 +16,16 @@ const Color gray = Color.fromRGBO(152, 152, 152, 1);
 const Color white = Color.fromRGBO(255, 255, 255, 1);
 
 /* 
-  Size height AppBar
+  Padding
  */
-
-const double appBar_height = 100;
-
 const double padding_horizontal = 26;
+
+/* 
+  Fonts
+ */
+const TextStyle fontStyleTitle =
+    TextStyle(fontWeight: FontWeight.w600, fontSize: 22, color: white);
+const TextStyle fontStyleHeader =
+    TextStyle(fontWeight: FontWeight.w500, fontSize: 18, color: black);
+const TextStyle fontStyleCaption =
+    TextStyle(fontWeight: FontWeight.w600, fontSize: 13, color: gray);

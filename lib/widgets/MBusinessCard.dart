@@ -57,8 +57,7 @@ class MBusinessCard extends StatelessWidget {
             children: <Widget>[
               Text(
                 card.nameOwner,
-                style: TextStyle(
-                    fontSize: 26, color: white, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 26, color: white),
               ),
             ],
           ),
@@ -73,8 +72,7 @@ class MBusinessCard extends StatelessWidget {
               _getMargin(),
               Text(
                 _parseCardNumber(card.number),
-                style: TextStyle(
-                    fontSize: 17, color: white, fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: 18, color: white),
               ),
               _getMargin(),
               Row(
@@ -84,17 +82,15 @@ class MBusinessCard extends StatelessWidget {
                   Text(
                     '\$${card.balance}',
                     style: TextStyle(
-                        fontSize: 21,
+                        fontSize: 23,
                         color: white,
                         fontWeight: FontWeight.w700),
                   ),
-                  Text(
-                    card.operators,
-                    style: TextStyle(
-                        fontSize: 21,
-                        color: white,
-                        fontWeight: FontWeight.w700),
-                  ),
+                  Container(
+                      height: 16,
+                      child: card.operators == 'Visa'
+                          ? Image(image: AssetImage('assets/img/visa.png'))
+                          : Text('This operator not found'))
                 ],
               )
             ],

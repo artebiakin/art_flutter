@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../globalVariables.dart';
 
 class MAppBar extends StatelessWidget with PreferredSizeWidget {
+  final double appBarHeight = 70;
   final String title;
 
   MAppBar({Key key, this.title}) : super(key: key);
@@ -20,6 +21,7 @@ class MAppBar extends StatelessWidget with PreferredSizeWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               Wrap(
+                crossAxisAlignment: WrapCrossAlignment.center,
                 spacing: 10,
                 children: <Widget>[
                   Icon(
@@ -28,33 +30,17 @@ class MAppBar extends StatelessWidget with PreferredSizeWidget {
                   ),
                   Text(
                     title,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 22,
-                        color: white),
+                    style: fontStyleTitle,
                   ),
                 ],
               )
             ],
           ),
         ),
-        // title: Padding(
-        //   padding: EdgeInsets.symmetric(horizontal: padding_horizontal),
-        //   child: Wrap(
-        //     alignment: WrapAlignment.end,
-        //     crossAxisAlignment: WrapCrossAlignment.end,
-        //     direction: Axis.horizontal,
-        //     spacing: 10,
-        //     children: <Widget>[
-        //       Icon(Icons.arrow_back_ios),
-        //       Text(title),
-        //     ],
-        //   ),
-        // ),
       ),
     );
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(appBar_height);
+  Size get preferredSize => Size.fromHeight(appBarHeight);
 }
