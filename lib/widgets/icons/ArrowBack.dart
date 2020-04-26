@@ -1,7 +1,7 @@
 import 'package:art_flutter/globalVariables.dart';
 import 'package:flutter/material.dart';
 
-class ArrowLeft extends CustomPainter {
+class ArrowBack extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint fill = Paint()

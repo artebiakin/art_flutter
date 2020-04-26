@@ -1,16 +1,51 @@
-# art_flutter
+# About
 
-A new Flutter project.
+ArtFluuter – это простое одноэкранное UI приложение написанное на технологии Flutter. Данная работа это задание конкурса ArtFlutter. Статью и условия можно найти здесь [dou.ua](https://dou.ua/lenta/articles/cross-platform-mobile-development/).
+![alt text](http://dev.artebiakin.com/source/img-07.png "ArtFlutter")
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Global variables
 
-A few resources to get you started if this is your first Flutter project:
+[globalVariables.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/globalVariables.dart) – файл содержащий все цвета приложения, горизонтальные паддинги (используются в AppBar и MainScreen) и основные начертания текста (BusinessСard их не использует).
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Data
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### BusinessCard.dart
+
+Модель бизнес карты. [BusinessCard.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/data/BusinessCard.dart).
+
+### Transaction.dart
+
+Модель информации о транзакции. [Transaction.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/data/Transaction.dart).
+
+## Screens
+
+Приложение содержит один экран [MainScreen.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/screens/MainScreen.dart), который является главным.
+
+## Widget
+
+### AppBar
+
+Разметка [MAppBar.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/AppBar.dart). Конструктор принимает значение title (название заголовка). Так же содержит виджет [ArrowBack.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/icons/ArrowBack.dart), который отрисовывет иконку.
+![alt text](http://dev.artebiakin.com/source/img-01.png "AppBar")
+
+### Business card
+
+Разметка [MBusinessСard.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/MBusinessСard.dart). Конструктор принимает BusinessСard.dart.
+![alt text](http://dev.artebiakin.com/source/img-02.png "Business card")
+
+### Transaction card
+
+Виджет отвечает за отображение транзакции. Конструктор принимает Transaction.
+[MTransaction.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/MBusinessСard.dart).
+![alt text](http://dev.artebiakin.com/source/img-03.png "Transaction")
+Содержит виджет, который отрисовывает [Drop](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/icons/Drop.dart) иконку.
+
+![alt text](http://dev.artebiakin.com/source/img-04.png "Drop")
+
+
+### ListTransaction
+
+Отрисовывает список виджетов Transaction, добавляет градацию по дате, отвечает за изменение цвета иконок.
+[MListTransaction.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/MListTransaction.dart).
+![alt text](http://dev.artebiakin.com/source/img-05.png "ListTransaction")

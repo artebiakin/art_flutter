@@ -1,16 +1,15 @@
-import 'package:art_flutter/data/BankCard.dart';
+import 'package:art_flutter/data/BusinessCard.dart';
 import 'package:art_flutter/globalVariables.dart';
 import 'package:flutter/material.dart';
 
 class MBusinessCard extends StatelessWidget {
-  // aspect for business card
+  // sets the aspect ratio
   final double aspectRatio = .59;
   final double borderRadius = 18;
   final double offset = 25;
-  static BankCard card = BankCard(
-      'John Smith', 4765111111119018, 'Amazon Platinum', 3469.52, 'Visa');
+  final BusinessCard card;
 
-  const MBusinessCard();
+  MBusinessCard({Key key, this.card}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,7 @@ class MBusinessCard extends StatelessWidget {
   }
 
   Widget _drawBusinessCard(BuildContext context, Color color,
-      [double offset = 0, BankCard card]) {
+      [double offset = 0, BusinessCard card]) {
     double width = MediaQuery.of(context).size.width;
     return Padding(
       padding: EdgeInsets.only(top: offset * .8, right: offset, left: offset),
@@ -47,7 +46,10 @@ class MBusinessCard extends StatelessWidget {
     );
   }
 
-  Widget _drawCardDetails(BankCard card) {
+/* 
+  Draws the main card with details.
+ */
+  Widget _drawCardDetails(BusinessCard card) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
       child: Column(
@@ -113,6 +115,9 @@ class MBusinessCard extends StatelessWidget {
   }
 }
 
+/* 
+  Draws two circles on the card.
+ */
 class BGPaint extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {

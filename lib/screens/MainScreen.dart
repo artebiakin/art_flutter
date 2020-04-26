@@ -1,3 +1,4 @@
+import 'package:art_flutter/data/BusinessCard.dart';
 import 'package:art_flutter/data/Transaction.dart';
 import 'package:art_flutter/globalVariables.dart';
 import 'package:art_flutter/widgets/MAppBar.dart';
@@ -18,11 +19,11 @@ class MainScreen extends StatelessWidget {
               horizontal: padding_horizontal, vertical: 15),
           child: Column(
             children: <Widget>[
-              MBusinessCard(),
+              MBusinessCard(card: _initBusinessCard()),
               Expanded(
                 child: Padding(
                   padding: EdgeInsets.only(top: 15),
-                  child: MListTransaction(_initTransaction()),
+                  child: MListTransaction(transactions: _initTransaction()),
                 ),
               )
             ],
@@ -32,6 +33,9 @@ class MainScreen extends StatelessWidget {
     );
   }
 
+/* 
+  Init transaction list.
+ */
   List<Transaction> _initTransaction() {
     DateTime today = DateTime.now();
     DateTime yesterday = DateTime(today.year, today.month, today.day - 1);
@@ -45,8 +49,19 @@ class MainScreen extends StatelessWidget {
 
     return listTransaction;
   }
+
+/* 
+  Init date business card.
+ */
+  BusinessCard _initBusinessCard() {
+    return BusinessCard(
+        'John Smith', 4765111111119018, 'Amazon Platinum', 3469.52, 'Visa');
+  }
 }
 
+/* 
+  Draw white block with rounded edges.
+ */
 class BGPaint extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {

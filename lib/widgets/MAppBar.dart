@@ -1,9 +1,10 @@
-import 'package:art_flutter/widgets/icons/ArrowLeft.dart';
+import 'package:art_flutter/widgets/icons/ArrowBack.dart';
 import 'package:flutter/material.dart';
 
 import '../globalVariables.dart';
 
 class MAppBar extends StatelessWidget with PreferredSizeWidget {
+  // sets app bar heights
   final double appBarHeight = 70;
   final String title;
 
@@ -29,13 +30,9 @@ class MAppBar extends StatelessWidget with PreferredSizeWidget {
                     width: 17,
                     height: 17,
                     child: CustomPaint(
-                      painter: ArrowLeft(),
+                      painter: ArrowBack(),
                     ),
                   ),
-                  // Icon(
-                  //   Icons.arrow_back_ios,
-                  //   color: white,
-                  // ),
                   Text(
                     title,
                     style: fontStyleTitle,
