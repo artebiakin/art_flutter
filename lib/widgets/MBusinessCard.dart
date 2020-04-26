@@ -90,7 +90,7 @@ class MBusinessCard extends StatelessWidget {
                   ),
                   Container(
                       height: 16,
-                      child: card.operators == 'Visa'
+                      child: card.operators.toLowerCase() == 'visa'
                           ? Image(image: AssetImage('assets/img/visa.png'))
                           : Text('This operator not found'))
                 ],

@@ -1,10 +1,11 @@
 # ArtFlutter
 
+![alt text](http://dev.artebiakin.com/source/img-07.png 'ArtFlutter')
+
 ## About
 
 ArtFluuter – это простое одноэкранное UI приложение написанное на технологии Flutter. Данная работа это задание конкурса ArtFlutter. Статью и условия можно найти здесь [dou.ua](https://dou.ua/lenta/articles/cross-platform-mobile-development/).
 
-![alt text](http://dev.artebiakin.com/source/img-07.png 'ArtFlutter')
 
 ## Global variables
 
@@ -28,13 +29,13 @@ ArtFluuter – это простое одноэкранное UI приложе�
 
 ### AppBar
 
-Разметка [MAppBar.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/AppBar.dart). Конструктор принимает значение title (название заголовка). Так же содержит виджет [ArrowBack.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/icons/ArrowBack.dart), который отрисовывет иконку.
+Разметка [MAppBar.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/MAppBar.dart). Конструктор принимает значение title (название заголовка). Так же содержит виджет [ArrowBack.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/icons/ArrowBack.dart), который отрисовывет иконку.
 
 ![alt text](http://dev.artebiakin.com/source/img-01.png 'AppBar')
 
 ### Business card
 
-Разметка [MBusinessСard.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/MBusinessСard.dart). Конструктор принимает BusinessСard.dart.
+Разметка [MBusinessСard.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/MBusinessCard.dart). Конструктор принимает BusinessСard.dart.
 
 ![alt text](http://dev.artebiakin.com/source/img-02.png 'Business card')
 
