@@ -14,20 +14,21 @@ class MainScreen extends StatelessWidget {
       appBar: MAppBar(title: 'Transaction report'),
       body: CustomPaint(
         painter: BGPaint(),
-        child: Container(
-          padding: EdgeInsets.symmetric(
-              horizontal: padding_horizontal, vertical: 15),
-          child: Column(
-            children: <Widget>[
-              MBusinessCard(card: _initBusinessCard()),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.only(top: 15),
-                  child: MListTransaction(transactions: _initTransaction()),
-                ),
-              )
-            ],
-          ),
+        child: ListView(
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(
+                  left: padding_horizontal, right: padding_horizontal, top: 15),
+              child: Column(
+                children: <Widget>[
+                  MBusinessCard(card: _initBusinessCard()),
+                  Padding(
+                      padding: EdgeInsets.only(top: 15),
+                      child: MListTransaction(transactions: _initTransaction()))
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );

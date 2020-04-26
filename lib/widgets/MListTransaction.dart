@@ -15,41 +15,41 @@ class MListTransaction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: ListView.builder(
-            shrinkWrap: true,
-            itemCount: transactions.length,
-            itemBuilder: (_, i) {
-              bool isRepeat = false;
+    return ListView.builder(
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
+        itemCount: transactions.length,
+        itemBuilder: (_, i) {
+          bool isRepeat = false;
 
-              if (dateTransaction == null ||
-                  dateTransaction.day != transactions[i].data.day) {
-                dateTransaction = transactions[i].data;
-              } else {
-                isRepeat = true;
-              }
+          if (dateTransaction == null ||
+              dateTransaction.day != transactions[i].data.day) {
+            dateTransaction = transactions[i].data;
+          } else {
+            isRepeat = true;
+          }
 
-              return Column(
-                children: <Widget>[
-                  isRepeat
-                      ? SizedBox()
-                      : Container(
-                          margin: EdgeInsets.only(top: 10),
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            _parseDate(dateTransaction),
-                            style: fontStyleCaption,
-                          ),
-                        ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10),
-                    child: MTransaction(
-                        transaction: transactions[i],
-                        color: colors[i % colors.length]),
-                  )
-                ],
-              );
-            }));
+          return Column(
+            children: <Widget>[
+              isRepeat
+                  ? SizedBox()
+                  : Container(
+                      margin: EdgeInsets.only(top: 10),
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        _parseDate(dateTransaction),
+                        style: fontStyleCaption,
+                      ),
+                    ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10),
+                child: MTransaction(
+                    transaction: transactions[i],
+                    color: colors[i % colors.length]),
+              )
+            ],
+          );
+        });
   }
 
   String _parseDate(DateTime date) {

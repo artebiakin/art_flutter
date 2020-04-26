@@ -14,11 +14,28 @@ class ArtFlutter extends StatelessWidget {
       statusBarColor: Colors.transparent,
     ));
     return MaterialApp(
+      builder: (context, child) {
+        return ScrollConfiguration(
+          behavior: MyBehavior(),
+          child: child,
+        );
+      },
       theme: ThemeData(
         fontFamily: 'Poppins',
         backgroundColor: dark_purple,
       ),
       home: MainScreen(),
     );
+  }
+}
+
+/* 
+  Remove scroll glow.
+ */
+class MyBehavior extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
   }
 }

@@ -12,35 +12,33 @@ class MAppBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        flexibleSpace: Container(
-          padding: EdgeInsets.symmetric(horizontal: padding_horizontal),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              Wrap(
-                crossAxisAlignment: WrapCrossAlignment.center,
-                spacing: 10,
-                children: <Widget>[
-                  Container(
-                    width: 17,
-                    height: 17,
-                    child: CustomPaint(
-                      painter: ArrowBack(),
-                    ),
+    return AppBar(
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      flexibleSpace: Container(
+        padding: EdgeInsets.symmetric(horizontal: padding_horizontal),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            Wrap(
+              crossAxisAlignment: WrapCrossAlignment.center,
+              spacing: 10,
+              children: <Widget>[
+                Container(
+                  width: 17,
+                  height: 17,
+                  child: CustomPaint(
+                    painter: ArrowBack(),
                   ),
-                  Text(
-                    title,
-                    style: fontStyleTitle,
-                  ),
-                ],
-              )
-            ],
-          ),
+                ),
+                Text(
+                  title,
+                  style: fontStyleTitle,
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );
