@@ -4,30 +4,53 @@ import 'package:art_flutter/globalVariables.dart';
 import 'package:art_flutter/widgets/MAppBar.dart';
 import 'package:art_flutter/widgets/MBusinessCard.dart';
 import 'package:art_flutter/widgets/MListTransaction.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final double offset = MediaQuery.of(context).size.height * .15;
+
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar: MAppBar(title: 'Transaction report'),
       body: CustomPaint(
         painter: BGPaint(),
-        child: ListView(
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.only(
-                  left: padding_horizontal, right: padding_horizontal, top: 15),
-              child: Column(
-                children: <Widget>[
-                  MBusinessCard(card: _initBusinessCard()),
-                  Padding(
-                      padding: EdgeInsets.only(top: 15),
-                      child: MListTransaction(transactions: _initTransaction()))
-                ],
+        child: CustomScrollView(
+          physics: BouncingScrollPhysics(),
+          slivers: <Widget>[
+            MAppBar(title: 'Transaction report'),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              fillOverscroll: true,
+              child: Container(
+                margin: EdgeInsets.only(top: offset),
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.only(
+                          top: offset,
+                          right: padding_horizontal,
+                          left: padding_horizontal),
+                      decoration: BoxDecoration(
+                          color: white,
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40),
+                              topRight: Radius.circular(40))),
+                      child: MListTransaction(transactions: _initTransaction()),
+                    ),
+                    Container(
+                      transform: Matrix4.translationValues(0, -offset, 0),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: padding_horizontal),
+                        child: MBusinessCard(card: _initBusinessCard()),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -62,7 +85,7 @@ class MainScreen extends StatelessWidget {
           name: 'Internet Bill',
           isSuccessfully: true,
           value: -100,
-          data: yesterday)
+          data: yesterday),
     ];
 
     return listTransaction;
@@ -87,18 +110,10 @@ class MainScreen extends StatelessWidget {
 class BGPaint extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = new Paint()..color = white;
+    Paint paint = Paint()..color = white;
 
-    canvas.drawRRect(
-        RRect.fromRectAndRadius(
-            Rect.fromLTWH(
-              0,
-              size.height * .2,
-              size.width,
-              size.height,
-            ),
-            Radius.circular(40)),
-        paint);
+    canvas.drawRect(
+        Rect.fromLTRB(0.0, size.height, size.width, size.height / 1.6), paint);
   }
 
   @override

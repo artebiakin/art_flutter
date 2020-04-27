@@ -12,10 +12,10 @@ class MAppBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return SliverAppBar(
       backgroundColor: Colors.transparent,
-      elevation: 0,
-      flexibleSpace: Container(
+      expandedHeight: appBarHeight,
+      flexibleSpace: Padding(
         padding: EdgeInsets.symmetric(horizontal: padding_horizontal),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,6 +42,36 @@ class MAppBar extends StatelessWidget with PreferredSizeWidget {
         ),
       ),
     );
+    // return AppBar(
+    //   backgroundColor: Colors.transparent,
+    //   elevation: 0,
+    //   flexibleSpace: Container(
+    //     padding: EdgeInsets.symmetric(horizontal: padding_horizontal),
+    //     child: Column(
+    //       crossAxisAlignment: CrossAxisAlignment.start,
+    //       mainAxisAlignment: MainAxisAlignment.end,
+    //       children: <Widget>[
+    //         Wrap(
+    //           crossAxisAlignment: WrapCrossAlignment.center,
+    //           spacing: 10,
+    //           children: <Widget>[
+    //             Container(
+    //               width: 17,
+    //               height: 17,
+    //               child: CustomPaint(
+    //                 painter: ArrowBack(),
+    //               ),
+    //             ),
+    //             Text(
+    //               title,
+    //               style: fontStyleTitle,
+    //             ),
+    //           ],
+    //         )
+    //       ],
+    //     ),
+    //   ),
+    // );
   }
 
   @override
