@@ -4,7 +4,6 @@ import 'package:art_flutter/globalVariables.dart';
 import 'package:art_flutter/widgets/MAppBar.dart';
 import 'package:art_flutter/widgets/MBusinessCard.dart';
 import 'package:art_flutter/widgets/MListTransaction.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {

@@ -11,32 +11,32 @@ class MTransaction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Column(
+    return Column(
       children: <Widget>[
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Wrap(
-              crossAxisAlignment: WrapCrossAlignment.center,
-              spacing: 15,
+            _drawDropIcon(color),
+            SizedBox(width: 15),
+            Expanded(
+                child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                _drawDropIcon(color),
-                Wrap(
-                  direction: Axis.vertical,
-                  children: <Widget>[
-                    Text(transaction.name, style: fontStyleHeader),
-                    Text(
-                        transaction.isSuccessfully
-                            ? 'Successfully'
-                            : 'Unsuccessfully',
-                        style: fontStyleCaption),
-                  ],
-                ),
+                Text(transaction.name,
+                    style: fontStyleHeader,
+                    overflow: TextOverflow.fade,
+                    maxLines: 1,
+                    softWrap: false),
+                Text(
+                    transaction.isSuccessfully
+                        ? 'Successfully'
+                        : 'Unsuccessfully',
+                    style: fontStyleCaption),
               ],
-            ),
-            _parseValue(transaction.value),
+            )),
+            SizedBox(width: 15),
+            _parseValue(transaction.value)
           ],
         ),
         SizedBox(
@@ -50,7 +50,7 @@ class MTransaction extends StatelessWidget {
           ),
         )
       ],
-    ));
+    );
   }
 
   Widget _drawDropIcon(Color color) {
