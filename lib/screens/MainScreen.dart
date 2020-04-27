@@ -41,11 +41,28 @@ class MainScreen extends StatelessWidget {
     DateTime today = DateTime.now();
     DateTime yesterday = DateTime(today.year, today.month, today.day - 1);
     List<Transaction> listTransaction = [
-      Transaction('Water Bill', false, -280, today),
-      Transaction('Income: Salary Oct', false, 1200, yesterday),
-      Transaction('Electric Bill', false, -480, yesterday),
-      Transaction('Income: Jane transfers', false, 500, yesterday),
-      Transaction('Internet Bill', true, -100, yesterday),
+      Transaction(
+          name: 'Water Bill', isSuccessfully: false, value: -280, data: today),
+      Transaction(
+          name: 'Income: Salary Oct',
+          isSuccessfully: false,
+          value: 1200,
+          data: yesterday),
+      Transaction(
+          name: 'Electric Bill',
+          isSuccessfully: false,
+          value: -480,
+          data: yesterday),
+      Transaction(
+          name: 'Income: Jane transfers',
+          isSuccessfully: false,
+          value: 500,
+          data: yesterday),
+      Transaction(
+          name: 'Internet Bill',
+          isSuccessfully: true,
+          value: -100,
+          data: yesterday)
     ];
 
     return listTransaction;
@@ -56,7 +73,11 @@ class MainScreen extends StatelessWidget {
  */
   BusinessCard _initBusinessCard() {
     return BusinessCard(
-        'John Smith', 4765111111119018, 'Amazon Platinum', 3469.52, 'Visa');
+        nameOwner: 'John Smith',
+        number: 4765111111119018,
+        nameCard: 'Amazon Platinum',
+        balance: 3469.52,
+        operators: 'Visa');
   }
 }
 

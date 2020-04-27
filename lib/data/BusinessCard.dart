@@ -6,5 +6,9 @@ class BusinessCard {
   final String operators;
 
   BusinessCard(
-      this.nameOwner, this.number, this.nameCard, this.balance, this.operators);
+      {this.nameOwner,
+      this.number,
+      this.nameCard,
+      this.balance,
+      this.operators});
 }
