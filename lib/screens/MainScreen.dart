@@ -112,8 +112,12 @@ class BGPaint extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()..color = white;
 
-    canvas.drawRect(
-        Rect.fromLTRB(0.0, size.height, size.width, size.height / 1.6), paint);
+    canvas.drawRRect(
+        RRect.fromRectAndCorners(
+            Rect.fromLTRB(0.0, size.height, size.width, size.height / 1.6),
+            topLeft: Radius.circular(40),
+            topRight: Radius.circular(40)),
+        paint);
   }
 
   @override
