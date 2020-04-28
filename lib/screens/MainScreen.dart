@@ -107,26 +107,6 @@ class _BodyState extends State<Body> {
           isSuccessfully: true,
           value: -100,
           data: yesterday),
-      Transaction(
-          name: 'Income: Salary Oct',
-          isSuccessfully: false,
-          value: 1200,
-          data: yesterday),
-      Transaction(
-          name: 'Electric Bill',
-          isSuccessfully: false,
-          value: -480,
-          data: yesterday),
-      Transaction(
-          name: 'Income: Jane transfers',
-          isSuccessfully: false,
-          value: 500,
-          data: yesterday),
-      Transaction(
-          name: 'Internet Bill',
-          isSuccessfully: true,
-          value: -100,
-          data: yesterday),
     ];
 
     return listTransaction;
