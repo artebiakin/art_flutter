@@ -3,47 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../globalVariables.dart';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-class MAppBar extends StatelessWidget with PreferredSizeWidget {
-  // sets app bar heights
-  final double appBarHeight = 70;
-  final String title;
-
-  MAppBar({Key key, this.title}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-      flexibleSpace: Container(
-        padding: EdgeInsets.symmetric(horizontal: padding_horizontal),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            Wrap(
-              crossAxisAlignment: WrapCrossAlignment.center,
-              spacing: 10,
-              children: <Widget>[
-                Container(
-                  width: 17,
-                  height: 17,
-                  child: CustomPaint(
-                    painter: ArrowBack(),
-                  ),
-                ),
-                Text(
-                  title,
-                  style: fontStyleTitle,
-                ),
-              ],
-            )
-          ],
-=======
-=======
->>>>>>> dev
 class MAppBar extends StatefulWidget {
   final String title;
   MAppBar({Key key, this.title}) : super(key: key);
@@ -135,39 +94,8 @@ class _MAppBarState extends State<MAppBar> {
                     )
                   ],
                 ),
-<<<<<<< HEAD
->>>>>>> dev
-=======
->>>>>>> dev
         ),
       ),
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  @override
-  Size get preferredSize => Size.fromHeight(appBarHeight);
 }
-=======
-=======
->>>>>>> dev
-}
-
-//  extends StatelessWidget with PreferredSizeWidget {
-//   // sets app bar heights
-//   final double appBarHeight = 70;
-//   final String title;
-
-//   MAppBar({Key key, this.title}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-
-//   @override
-//   Size get preferredSize => Size.fromHeight(appBarHeight);
-// }
-<<<<<<< HEAD
->>>>>>> dev
-=======
->>>>>>> dev
