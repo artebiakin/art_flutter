@@ -40,7 +40,7 @@ class MTransaction extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: 13,
+          height: 10,
         ),
         SizedBox(
           width: double.infinity,
