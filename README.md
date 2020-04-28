@@ -1,6 +1,6 @@
 # ArtFlutter
 
-![alt text](http://dev.artebiakin.com/source/img-07.png 'ArtFlutter')
+![alt text](http://dev.artebiakin.com/source/img-01.png 'ArtFlutter')
 
 ## About
 
@@ -25,19 +25,19 @@ ArtFluuter – это простое одноэкранное UI приложе�
 
 Приложение содержит один экран [MainScreen.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/screens/MainScreen.dart), который является главным.
 
-## Widget
+## Widgets
 
 ### AppBar
 
 Разметка [MAppBar.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/MAppBar.dart). Конструктор принимает значение title (название заголовка). Так же содержит виджет [ArrowBack.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/icons/ArrowBack.dart), который отрисовывет иконку.
 
-![alt text](http://dev.artebiakin.com/source/img-01.png 'AppBar')
+![alt text](http://dev.artebiakin.com/source/app-bar.png 'AppBar')
 
 ### Business card
 
 Разметка [MBusinessСard.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/MBusinessCard.dart). Конструктор принимает BusinessСard.dart.
 
-![alt text](http://dev.artebiakin.com/source/img-02.png 'Business card')
+![alt text](http://dev.artebiakin.com/source/card.png 'Business card')
 
 ### Transaction card
 
@@ -47,11 +47,16 @@ ArtFluuter – это простое одноэкранное UI приложе�
 ![alt text](http://dev.artebiakin.com/source/img-03.png 'Transaction')
 Содержит виджет, который отрисовывает [Drop](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/icons/Drop.dart) иконку.
 
-![alt text](http://dev.artebiakin.com/source/img-04.png 'Drop')
+![alt text](http://dev.artebiakin.com/source/drop.png 'Drop')
 
 ### ListTransaction
 
 Отрисовывает список виджетов Transaction, добавляет градацию по дате, отвечает за изменение цвета иконок.
 [MListTransaction.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/MListTransaction.dart).
 
-![alt text](http://dev.artebiakin.com/source/img-05.png 'ListTransaction')
+![alt text](http://dev.artebiakin.com/source/list.png 'ListTransaction')
+
+# Thanks
+
+![alt text](http://dev.artebiakin.com/source/Screen-Recording-2020-04-28-at-20.54.gif
+ 'ListTransaction')

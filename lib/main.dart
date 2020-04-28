@@ -14,6 +14,7 @@ class ArtFlutter extends StatelessWidget {
       statusBarColor: Colors.transparent,
     ));
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       builder: (context, child) {
         return ScrollConfiguration(
           behavior: MyBehavior(),
