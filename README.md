@@ -58,5 +58,6 @@ ArtFluuter – это простое одноэкранное UI приложе�
 
 # Thanks
 
-![alt text](http://dev.artebiakin.com/source/Screen-Recording-2020-04-28-at-20.54.gif
- 'ListTransaction')
+<p align="center">
+  <img src="http://dev.artebiakin.com/source/Screen-Recording-2020-04-28-at-20.54.gif" alt="ListTransaction"/>
+</p>
