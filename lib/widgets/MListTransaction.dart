@@ -16,6 +16,10 @@ class MListTransaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+<<<<<<< HEAD
+=======
+        padding: EdgeInsets.only(top: 18, left: 0, right: 0, bottom: 0),
+>>>>>>> dev
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         itemCount: transactions.length,
@@ -34,7 +38,11 @@ class MListTransaction extends StatelessWidget {
               isRepeat
                   ? SizedBox()
                   : Container(
+<<<<<<< HEAD
                       margin: EdgeInsets.only(top: 10),
+=======
+                      margin: EdgeInsets.only(top: 15),
+>>>>>>> dev
                       alignment: Alignment.centerLeft,
                       child: Text(
                         _parseDate(dateTransaction),
@@ -42,7 +50,11 @@ class MListTransaction extends StatelessWidget {
                       ),
                     ),
               Padding(
+<<<<<<< HEAD
                 padding: EdgeInsets.symmetric(vertical: 10),
+=======
+                padding: EdgeInsets.only(top: 10, bottom: 5),
+>>>>>>> dev
                 child: MTransaction(
                     transaction: transactions[i],
                     color: colors[i % colors.length]),

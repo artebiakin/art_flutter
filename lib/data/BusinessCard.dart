@@ -7,12 +7,18 @@ class BusinessCard {
 
   BusinessCard(
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.nameOwner, this.number, this.nameCard, this.balance, this.operators);
 =======
+=======
+>>>>>>> dev
       {this.nameOwner,
       this.number,
       this.nameCard,
       this.balance,
       this.operators});
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 }

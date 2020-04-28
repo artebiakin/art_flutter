@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../globalVariables.dart';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class MAppBar extends StatelessWidget with PreferredSizeWidget {
   // sets app bar heights
   final double appBarHeight = 70;
@@ -41,6 +42,8 @@ class MAppBar extends StatelessWidget with PreferredSizeWidget {
             )
           ],
 =======
+=======
+>>>>>>> dev
 class MAppBar extends StatefulWidget {
   final String title;
   MAppBar({Key key, this.title}) : super(key: key);
@@ -132,17 +135,23 @@ class _MAppBarState extends State<MAppBar> {
                     )
                   ],
                 ),
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
         ),
       ),
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   @override
   Size get preferredSize => Size.fromHeight(appBarHeight);
 }
 =======
+=======
+>>>>>>> dev
 }
 
 //  extends StatelessWidget with PreferredSizeWidget {
@@ -158,4 +167,7 @@ class _MAppBarState extends State<MAppBar> {
 //   @override
 //   Size get preferredSize => Size.fromHeight(appBarHeight);
 // }
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev

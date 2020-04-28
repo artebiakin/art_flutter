@@ -6,6 +6,10 @@ import 'package:art_flutter/widgets/MBusinessCard.dart';
 import 'package:art_flutter/widgets/MListTransaction.dart';
 import 'package:flutter/material.dart';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import 'package:flutter/rendering.dart';
+>>>>>>> dev
 =======
 import 'package:flutter/rendering.dart';
 >>>>>>> dev
@@ -15,6 +19,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
+<<<<<<< HEAD
 <<<<<<< HEAD
       appBar: MAppBar(title: 'Transaction report'),
       body: CustomPaint(
@@ -36,6 +41,8 @@ class MainScreen extends StatelessWidget {
           ],
         ),
 =======
+=======
+>>>>>>> dev
       body: Body(),
     );
   }
@@ -98,13 +105,20 @@ class _BodyState extends State<Body> {
             ),
           ),
         ],
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
       ),
     );
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* 
+=======
+  /* 
+>>>>>>> dev
 =======
   /* 
 >>>>>>> dev
@@ -115,12 +129,15 @@ class _BodyState extends State<Body> {
     DateTime yesterday = DateTime(today.year, today.month, today.day - 1);
     List<Transaction> listTransaction = [
 <<<<<<< HEAD
+<<<<<<< HEAD
       Transaction('Water Bill', false, -280, today),
       Transaction('Income: Salary Oct', false, 1200, yesterday),
       Transaction('Electric Bill', false, -480, yesterday),
       Transaction('Income: Jane transfers', false, 500, yesterday),
       Transaction('Internet Bill', true, -100, yesterday),
 =======
+=======
+>>>>>>> dev
       Transaction(
           name: 'Water Bill', isSuccessfully: false, value: -280, data: today),
       Transaction(
@@ -143,6 +160,9 @@ class _BodyState extends State<Body> {
           isSuccessfully: true,
           value: -100,
           data: yesterday),
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
     ];
 
@@ -155,13 +175,19 @@ class _BodyState extends State<Body> {
   BusinessCard _initBusinessCard() {
     return BusinessCard(
 <<<<<<< HEAD
+<<<<<<< HEAD
         'John Smith', 4765111111119018, 'Amazon Platinum', 3469.52, 'Visa');
 =======
+=======
+>>>>>>> dev
         nameOwner: 'John Smith',
         number: 4765111111119018,
         nameCard: 'Amazon Platinum',
         balance: 3469.52,
         operators: 'Visa');
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
   }
 }
@@ -170,6 +196,7 @@ class _BodyState extends State<Body> {
   Draw white block with rounded edges.
  */
 class BGPaint extends CustomPainter {
+<<<<<<< HEAD
 <<<<<<< HEAD
   @override
   void paint(Canvas canvas, Size size) {
@@ -185,6 +212,8 @@ class BGPaint extends CustomPainter {
             ),
             Radius.circular(40)),
 =======
+=======
+>>>>>>> dev
   double scroll;
 
   BGPaint(this.scroll);
@@ -205,6 +234,9 @@ class BGPaint extends CustomPainter {
             Rect.fromLTRB(0.0, size.height, size.width, height),
             topLeft: Radius.circular(40),
             topRight: Radius.circular(40)),
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
         paint);
   }
