@@ -1,6 +1,6 @@
 # ArtFlutter
 
-![alt text](http://dev.artebiakin.com/source/img-01.png 'ArtFlutter')
+![alt text](http://dev.artebiakin.com/source/preview.png 'ArtFlutter')
 
 ## About
 
