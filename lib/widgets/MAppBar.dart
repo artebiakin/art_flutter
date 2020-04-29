@@ -1,4 +1,4 @@
-import 'package:art_flutter/widgets/icons/ArrowBack.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../globalVariables.dart';
@@ -79,13 +79,7 @@ class _MAppBarState extends State<MAppBar> {
                       crossAxisAlignment: WrapCrossAlignment.center,
                       spacing: 10,
                       children: <Widget>[
-                        Container(
-                          width: 17,
-                          height: 17,
-                          child: CustomPaint(
-                            painter: ArrowBack(),
-                          ),
-                        ),
+                        Icon(CupertinoIcons.back, color: white, size: 28),
                         Text(
                           title,
                           style: fontStyleTitle,

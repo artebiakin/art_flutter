@@ -29,7 +29,7 @@ ArtFluuter – это простое одноэкранное UI приложе�
 
 ### AppBar
 
-Разметка [MAppBar.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/MAppBar.dart). Конструктор принимает значение title (название заголовка). Так же содержит виджет [ArrowBack.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/icons/ArrowBack.dart), который отрисовывет иконку.
+Разметка [MAppBar.dart](https://github.com/artebiakin/art_flutter/tree/master/lib/widgets/MAppBar.dart). Конструктор принимает значение title (название заголовка).
 
 ![alt text](http://dev.artebiakin.com/source/app-bar.png 'AppBar')
 
