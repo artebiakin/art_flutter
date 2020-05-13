@@ -54,8 +54,6 @@ class _BodyState extends State<Body> {
         slivers: <Widget>[
           MAppBar(title: 'Transaction report'),
           SliverFillRemaining(
-            hasScrollBody: false,
-            fillOverscroll: true,
             child: Container(
               child: Stack(
                 children: <Widget>[
