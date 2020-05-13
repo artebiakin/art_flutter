@@ -53,13 +53,14 @@ class _BodyState extends State<Body> {
         controller: _scrollController,
         slivers: <Widget>[
           MAppBar(title: 'Transaction report'),
-          SliverFillRemaining(
-            child: Container(
-              child: Stack(
+          SliverList(
+            delegate: SliverChildListDelegate([
+              Stack(
                 children: <Widget>[
                   Padding(
                     padding:
-                        EdgeInsets.symmetric(horizontal: padding_horizontal),
+                        EdgeInsets.symmetric(horizontal: padding_horizontal)
+                            .add(EdgeInsets.only(bottom: 10)),
                     child: Wrap(
                       children: <Widget>[
                         MBusinessCard(card: _initBusinessCard()),
@@ -69,8 +70,8 @@ class _BodyState extends State<Body> {
                   )
                 ],
               ),
-            ),
-          ),
+            ]),
+          )
         ],
       ),
     );
